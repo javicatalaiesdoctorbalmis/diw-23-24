@@ -26,7 +26,34 @@
             </section>
             <section>
                 <section>
-                    <h2 class="special-header">CSS preprocessors</h2>
+                    <h2 class="special-header">Contents</h2>
+                    <ol class="special-body">
+                        <li><a href="#/2">CSS preprocessors</a></li>
+                        <li><a href="#/3">Sass</a></li>
+                        <li><a href="#/4">Installing Sass</a></li>
+                        <li><a href="#/5">Preprocessing Sass files</a></li>
+                        <li><a href="#/6">Variables</a></li>
+                        <li><a href="#/7">Partials</a></li>
+                        <li><a href="#/8">Nested rules</a></li>
+                        <li><a href="#/9">Built-in modules</a></li>
+                    </ol>
+                </section>
+                <section>
+                    <h2 class="special-header">Contents</h2>
+                    <ol start="9" class="special-body">
+                        <li><a href="#/10">Lists and maps</a></li>
+                        <li><a href="#11">Flow control</a></li>
+                        <li><a href="#/12">Mixins</a></li>
+                        <li><a href="#/13">Functions</a></li>
+                        <li><a href="#/14">Inheritance (@extend) + placeholder selectors + extends vs mixins</a></li>
+                        <li><a href="#/15">Responsive in Sass?</a></li>
+                    </ol>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">CSS preprocessors</a></h2>
                     <ul class="special-body">
                         <li>Sass is a CSS preprocessor (like Less or PostCSS)</li>
                         <li>CSS preprocessors will add some features to CSS:
@@ -42,7 +69,7 @@
                     </ul>
                 </section>
                 <section>
-                    <h2 class="special-header">CSS preprocessors</h2>
+                    <h2 class="special-header"><a href="#/1">CSS preprocessors</a></h2>
                     <svg class="r-stretch" version="1.1" viewBox="0.0 0.0 936.4829396325459 441.6640419947507"
                         fill="none" stroke="none" stroke-linecap="square" stroke-miterlimit="10"
                         xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
@@ -90,7 +117,7 @@
                 </section>
             </section>
             <section>
-                <h2 class="special-header">Sass</h2>
+                <h2 class="special-header"><a href="#/1">Sass</a></h2>
                 <ul class="special-body">
                     <li>CSS with superpowers!</li>
                     <li>Free and open-source</li>
@@ -106,7 +133,7 @@
                 </ul>
             </section>
             <section>
-                <h2 class="special-header">Installing Sass</h2>
+                <h2 class="special-header"><a href="#/1">Installing Sass</a></h2>
                 <div class="special-body">
                     <ul>
                         <li>The Sass team maintains two libraries for Sass:
@@ -125,7 +152,7 @@
                 </div>
             </section>
             <section>
-                <h2 class="special-header">Preprocessing Sass files</h2>
+                <h2 class="special-header"><a href="#/1">Preprocessing Sass files</a></h2>
                 <div class="special-body">
                     <ul>
                         <li>You can compile your Sass to CSS using the <code>sass</code>
@@ -145,7 +172,7 @@
 
             <section>
                 <section>
-                    <h2 class="special-header">Variables</h2>
+                    <h2 class="special-header"><a href="#/1">Variables</a></h2>
                     <div class="special-body">
                         <ul>
                             <li>Variables are a way to store information that you want to reuse throughout your
@@ -159,7 +186,7 @@
                     </div>
                 </section>
                 <section>
-                    <h2 class="special-header">Variables</h2>
+                    <h2 class="special-header"><a href="#/1">Variables</a></h2>
                     <div class="special-body">
 
                         <pre data-cc-copy="SCSS"><code class="scss">$myColor: #326dee;
@@ -182,7 +209,7 @@ color: $myColor;
 
             <section>
                 <section>
-                    <h2 class="special-header">Partials</h2>
+                    <h2 class="special-header"><a href="#/1">Partials</a></h2>
                     <div class="special-body">
                         <ul>
                             <li>You don't have to write all your Sass in a single file.
@@ -200,7 +227,7 @@ color: $myColor;
                     </div>
                 </section>
                 <section>
-                    <h2 class="special-header">Partials</h2>
+                    <h2 class="special-header"><a href="#/1">Partials</a></h2>
                     <div class="special-body">
 
                         <pre data-cc-copy="SCSS"><code class="scss">//_colors.scss
@@ -214,10 +241,13 @@ color: $myColor;
 a {
 color: $myColor;
 }</code></pre>
+                        <p class="tip">
+                            When importing several Sass files, order in <code>@import</code> directives is relevant.
+                        </p>
                     </div>
                 </section>
                 <section>
-                    <h2 class="special-header">Partials</h2>
+                    <h2 class="special-header"><a href="#/1">Partials</a></h2>
                     <div class="special-body">
                         <p class="tip">
                             In October of 2019 Sass announced their new module system, which primarily addressed the
@@ -232,6 +262,373 @@ color: $myColor;
 
             </section>
 
+
+
+            <section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Nested rules</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>Sass let you nest your CSS selectors just like in HTML.
+                            </li>
+                            <li>It is cleaner and easier to read than standard CSS.
+                            </li>
+                        </ul>
+                        <div class="multiCol">
+                            <div class="col">
+                                <pre data-cc-copy="SCSS"><code class="scss">nav {
+    ul {
+        list-style: none;
+    }
+    li {
+        display: inline-block;
+    }
+}
+</code></pre>
+                            </div>
+                            <div class="col">
+                                <pre data-cc-copy="CSS"><code class="css">nav ul {
+    list-style: none;
+}
+nav li {
+    display: inline-block;
+}
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Nested properties</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>Sass also let you nest CSS properties with the same prefix.
+                            </li>
+                        </ul>
+                        <div class="multiCol">
+                            <div class="col">
+                                <pre data-cc-copy="SCSS"><code class="scss">body {
+  background: {
+     color: yellow;
+     attachment: fixed;
+     repeat: no-repeat;
+   }
+}</code></pre>
+                            </div>
+                            <div class="col">
+                                <pre data-cc-copy="CSS"><code class="css">body {
+  background-color: yellow;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Parent selector (&)</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>It is a special selector invented by Sass that is used in nested selectors to refer to the outer selector.
+                            </li>
+                        </ul>
+                        <div class="multiCol">
+                            <div class="col">
+                                <pre data-cc-copy="SCSS"><code class="scss">.alert {
+    &:hover {
+        font-weight: bold;
+    }
+    :not(&) {
+        opacity: 0.8;
+    }
+}</code></pre>
+                            </div>
+                            <div class="col">
+                                <pre data-cc-copy="CSS"><code class="css">.alert:hover {
+    font-weight: bold;
+}
+:not(.alert) {
+    opacity: 0.8;
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+
+
+            <section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Built-in modules</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>Sass provides many built-in modules which contain useful functions.
+                                <ul class="sublist">
+                                    <li>math</li>
+                                    <li>color</li>
+                                    <li>list</li>
+                                    <li>map</li>
+                                    <li>string</li>
+                                    <li>selector</li>
+                                    <li>meta</li>
+                                </ul>
+                            </li>
+                            <li>These modules can be loaded with the <code>@use</code> rule.
+                            </li>
+                        </ul>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Built-in modules</a></h2>
+                    <div class="special-body">
+                        <pre data-cc-copy="SCSS"><code class="scss">@use 'sass:math';
+
+$base-font-size: 1rem;
+
+.footnote {
+    font-size: math.div($base-font-size, 2);
+}</code></pre>
+                        <pre data-cc-copy="CSS"><code class="css">.footnote {
+    font-size: 0.5rem;
+}                               </code></pre>
+
+                        <div class="tip">
+                            Numeric operators <code>[+,-,*,%]</code> can be used directly in Sass.
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+
+            <section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Lists and maps</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>A Sass list contains a sequence of other values, separated by commas or spaces.</li>
+                            <li>List members can be goruped by brackets or parenthesis, but it's no necessary.</li>
+                            <pre data-cc-copy="SCSS"><code class="scss">$list1: [Helvetica, Arial, sans-serif];
+$list2: (10px 12px 10px 20px);
+$list3: #fad941, #ffffff, #e02520;</code></pre>
+                        </ul>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Lists and maps</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>The map data type represents one or more key/value pairs.</li>
+                            <li>The keys must be unique, but the values may be duplicated.</li>
+                            <li>Unlike lists, maps must be written with parentheses around them.</li>
+                            <pre
+                                data-cc-copy="SCSS"><code class="scss">$map: ("regular": 400, "medium": 500, "bold": 700);</code></pre>
+                        </ul>
+                </section>
+
+                <section>
+                    <h2 class="special-header"><a href="#/1">Lists an maps</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>We can loop through list and maps members using <code>@each</code> rule.</li>
+                        </ul>
+                        <div class="multiCol">
+                            <div class="col">
+                                <pre data-cc-copy="SCSS"><code class="scss">$sizes: 40px, 80px;
+
+@each $size in $sizes {
+  .icon-#{$size} {
+    height: $size;
+    width: $size;
+  }</code></pre>
+                            </div>
+                            <div class="col">
+                                <pre data-cc-copy="CSS"><code class="css">.icon-40px {
+  height: 40px;
+  width: 40px;
+}
+.icon-80px {
+  height: 80px;
+  width: 80px;
+}</code></pre>
+                            </div>
+                        </div>
+                        <div class="tip">Interpolation (#{}) allows you to embed variables into CSS.</div>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Lists an maps</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>We can loop through list and maps members using <code>@each</code> rule.</li>
+                        </ul>
+                        <div class="multiCol">
+                            <div class="col">
+                                <pre data-cc-copy="SCSS"><code class="scss">$colors: (
+"blue": #1919e6, 
+"red": #e61919);
+
+@each $key, $val in $colors {
+    .text-#{$key} {
+        color: $val;
+    }
+}</code></pre>
+                            </div>
+                            <div class="col">
+                                <pre data-cc-copy="CSS"><code class="css">.text-blue {
+    color: #1919e6;
+}
+.text-red {
+    color: #e61919;
+}</code></pre>
+                            </div>
+                        </div>
+                        <div class="tip">
+                            Lots of functions in <code>list</code> and <code>map</code> built-in modules!
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+
+
+            <section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Flow control (@if)</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>Conditionals statements are made using <code>@if</code> rule.</li>
+                            <li>An <code>@if</code> rule can optionally have an <code>@else</code> rule.</li>
+                            <div class="multiCol">
+                                <div class="col">
+                                    <pre data-cc-copy="SCSS"><code class="scss">$circle: true;
+.avatar {
+    @if $circle {
+      border-radius: 50px;
+    } @else {
+        border-radius: 5px;
+    }</code></pre>
+                                </div>
+                                <div class="col">
+                                    <pre data-cc-copy="CSS"><code class="css">.avatar {
+    border-radius: 50px;
+}</code></pre>
+                                </div>
+                            </div>
+                            <div class="tip">
+                                Relational (==, !=, <,>, <=,>=) and boolean (and, or, not) operators are allowed.
+                            </div>
+                        </ul>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Flow control (@for)</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li><code>@for</code> rule allows us to iterate between two values.</li>
+                            <div class="multiCol">
+                                <div class="col">
+                                    <pre data-cc-copy="SCSS"><code class="scss">@for $i from 1 to 3 {
+    .font-size-#{$i} {
+        font-size: $i * 10px;
+    }
+}
+</code></pre>
+                                </div>
+                                <div class="col">
+                                    <pre data-cc-copy="CSS"><code class="css">.font-size-1 {
+    font-size: 10px; 
+}
+  
+.font-size-2 {
+    font-size: 20px; 
+}</code></pre>
+                                </div>
+                            </div>
+                            <div class="tip">
+                                By default the last number is excluded, but if we put "through" instead of "to" it will be included.
+                            </div>
+                        </ul>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Mixins</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>A mixin lets you reuse groups of CSS declarations.</li>
+                            <li>To create a mixin you use the <code>@mixin</code> directive.</li>
+                            <li>You can use it with the <code>@include</code> directive.</li>
+                            <div class="multiCol">
+                                <div class="col">
+                                    <pre data-cc-copy="SCSS"><code class="scss">@mixin important-text {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.danger {
+    @include important-text;
+    color: red;
+}</code></pre>
+                                </div>
+                                <div class="col">
+                                    <pre data-cc-copy="CSS"><code class="css">.danger {
+    font-size: 25px;
+    font-weight: bold;
+    color: red;
+}</code></pre>
+                                </div>
+                            </div>
+                        </ul>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Mixins</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>You can pass in arguments to your mixin.</li>
+                        </ul>
+                                    <pre data-cc-copy="SCSS"><code class="scss">@mixin important-text($text-color) {
+    font-size: 25px;
+    font-weight: bold;
+    color: $text-color;
+}
+
+.danger {
+    @include important-text(red);
+}</code></pre>
+                                    <pre data-cc-copy="CSS"><code class="css">.danger {
+    font-size: 25px;
+    font-weight: bold;
+    color: red;
+}</code></pre>
+
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Mixins</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>It's possible to define default values for variables.</li>
+                        </ul>
+                                    <pre data-cc-copy="SCSS"><code class="scss">@mixin important-text($text-color:red) {
+    font-size: 25px;
+    font-weight: bold;
+    color: $text-color;
+}
+
+.danger {
+    @include important-text;
+}</code></pre>
+                                    <pre data-cc-copy="CSS"><code class="css">.danger {
+    font-size: 25px;
+    font-weight: bold;
+    color: red;
+}</code></pre>
+
+                </section>
+
+            </section>
+
+                
         </div>
     </div>
 
