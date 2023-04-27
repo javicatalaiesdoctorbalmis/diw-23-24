@@ -17,12 +17,12 @@
     <div class="reveal">
         <div class="slides">
             <section class="title">
-                <h1>Sass</h2>
-                    <h2>Syntactically Awesome Stylesheets</h2>
-                    <h5>Javier Catalá</h5>
-                    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img
-                            alt="Licencia de Creative Commons" style="border-width:0"
-                            src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+                <img src="https://sass-lang.com/assets/img/styleguide/color-1c4aab2b.png" />
+                <h2>Syntactically Awesome Stylesheets</h2>
+                <h5>Javier Catalá</h5>
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img
+                        alt="Licencia de Creative Commons" style="border-width:0"
+                        src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
             </section>
             <section>
                 <section>
@@ -45,8 +45,7 @@
                         <li><a href="#11">Flow control</a></li>
                         <li><a href="#/12">Mixins</a></li>
                         <li><a href="#/13">Functions</a></li>
-                        <li><a href="#/14">Inheritance (@extend) + placeholder selectors + extends vs mixins</a></li>
-                        <li><a href="#/15">Responsive in Sass?</a></li>
+                        <li><a href="#/14">Inheritance (Extends)</a></li>
                     </ol>
                 </section>
             </section>
@@ -204,6 +203,33 @@ color: $myColor;
  }                        </code></pre>
                     </div>
                 </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Variables</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>When you assign a value to a variable, if that variable already had a value, its old value is overwritten.
+                            </li>
+                            <li>The <code>!default</code> flag assigns a value to a variable only if that variable isn’t defined or it is null.
+                            </li>
+                        </ul>
+                        <div class="multiCol">
+                            <div class="col">
+                                <pre data-cc-copy="SCSS"><code class="scss">$primary: #93c47d;
+$primary: #45818e !default;
+
+h1 {
+    color: $primary;
+}
+</code></pre>
+                            </div>
+                            <div class="col">
+                                <pre data-cc-copy="CSS"><code class="css">h1 {
+    color: #93c47d;
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </section>
 
 
@@ -331,7 +357,8 @@ nav li {
                     <h2 class="special-header"><a href="#/1">Parent selector (&)</a></h2>
                     <div class="special-body">
                         <ul>
-                            <li>It is a special selector invented by Sass that is used in nested selectors to refer to the outer selector.
+                            <li>It is a special selector invented by Sass that is used in nested selectors to refer to
+                                the outer selector.
                             </li>
                         </ul>
                         <div class="multiCol">
@@ -545,7 +572,8 @@ $list3: #fad941, #ffffff, #e02520;</code></pre>
                                 </div>
                             </div>
                             <div class="tip">
-                                By default the last number is excluded, but if we put "through" instead of "to" it will be included.
+                                By default the last number is excluded, but if we put "through" instead of "to" it will
+                                be included.
                             </div>
                         </ul>
                 </section>
@@ -587,7 +615,7 @@ $list3: #fad941, #ffffff, #e02520;</code></pre>
                         <ul>
                             <li>You can pass in arguments to your mixin.</li>
                         </ul>
-                                    <pre data-cc-copy="SCSS"><code class="scss">@mixin important-text($text-color) {
+                        <pre data-cc-copy="SCSS"><code class="scss">@mixin important-text($text-color) {
     font-size: 25px;
     font-weight: bold;
     color: $text-color;
@@ -596,7 +624,7 @@ $list3: #fad941, #ffffff, #e02520;</code></pre>
 .danger {
     @include important-text(red);
 }</code></pre>
-                                    <pre data-cc-copy="CSS"><code class="css">.danger {
+                        <pre data-cc-copy="CSS"><code class="css">.danger {
     font-size: 25px;
     font-weight: bold;
     color: red;
@@ -609,7 +637,7 @@ $list3: #fad941, #ffffff, #e02520;</code></pre>
                         <ul>
                             <li>It's possible to define default values for variables.</li>
                         </ul>
-                                    <pre data-cc-copy="SCSS"><code class="scss">@mixin important-text($text-color:red) {
+                        <pre data-cc-copy="SCSS"><code class="scss">@mixin important-text($text-color: red) {
     font-size: 25px;
     font-weight: bold;
     color: $text-color;
@@ -618,17 +646,156 @@ $list3: #fad941, #ffffff, #e02520;</code></pre>
 .danger {
     @include important-text;
 }</code></pre>
-                                    <pre data-cc-copy="CSS"><code class="css">.danger {
+                        <pre data-cc-copy="CSS"><code class="css">.danger {
     font-size: 25px;
     font-weight: bold;
     color: red;
 }</code></pre>
 
                 </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Mixins</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>In addition to taking arguments, a mixin can take an entire block of styles.</li>
+                            <li>This block is injected in place of the <code>@content</code> rule</li>
+                        </ul>
+                        <pre data-cc-copy="SCSS"><code class="scss">@mixin hover {
+    &:hover {
+        @content
+    }
+}
 
+.link {
+    @include hover {
+        text-decoration: underline;
+    }
+}</code></pre>
+                </section>
             </section>
 
-                
+            <section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Functions</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>Functions allow you to define complex operations that you can re-use.</li>
+                            <li>To create a function you use the <code>@function</code> and <code>@return</code>
+                                directives.</li>
+                        </ul>
+                        <pre data-cc-copy="SCSS"><code class="scss">@function add($num1, $num2) {
+    $result : $num1 + $num2;
+    @return $result;
+}
+
+div {
+    height: add(300, 400) * 1px;
+}</code></pre>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Functions</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>You can also set a default value for arguments.</li>
+                        </ul>
+                        <pre data-cc-copy="SCSS"><code class="scss">@function add($num1, $num2: 100) {
+    $result : $num1 + $num2;
+    @return $result;
+}
+
+div {
+    height: add(300) * 1px;
+}</code></pre>
+                        <ul>
+                            <li>We can supply the argument name when calling.</li>
+                        </ul>
+                        <pre data-cc-copy="SCSS"><code class="scss">div {
+    height: add($num2: 300, $num1: 100) * 1px;
+}</code></pre>
+
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Inheritance (Extends)</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>Using <code>@extend</code> lets you share a set of CSS properties from one selector to
+                                another.</li>
+                        </ul>
+                        <div class="multiCol">
+                            <div class="col">
+                                <pre data-cc-copy="SCSS"><code class="scss">.button-basic {
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-submit {
+    @extend .button-basic;
+    background-color: green;
+    color: white;
+}
+  </code></pre>
+                            </div>
+                            <div class="col">
+                                <pre data-cc-copy="CSS"><code class="css">.button-basic, 
+.button-submit {
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-submit {
+    background-color: green;
+    color: white;
+}</code></pre>
+                            </div>
+                        </div>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Inheritance (Extends)</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>If you don't want the base class in CSS output, you can use a placeholder selector
+                                (<code>%</code>).</li>
+                        </ul>
+                        <div class="multiCol">
+                            <div class="col">
+                                <pre data-cc-copy="SCSS"><code class="scss">%button-basic {
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-submit {
+    @extend %button-basic;
+    background-color: green;
+    color: white;
+}
+  </code></pre>
+                            </div>
+                            <div class="col">
+                                <pre data-cc-copy="CSS"><code class="css">.button-submit {
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.button-submit {
+    background-color: green;
+    color: white;
+}</code></pre>
+                            </div>
+                        </div>
+                </section>
+
+
         </div>
     </div>
 
