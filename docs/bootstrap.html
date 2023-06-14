@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap</title>
+    <meta name="author" content="javicatala">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/sky.css">
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <link rel="stylesheet" href="dist/custom.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section class="title">
+                <img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" style="width:300px;" />
+                <h2>Bootstrap</h2>
+                <h4>Javier Catalá</h4>
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img
+                        alt="Licencia de Creative Commons" style="border-width:0"
+                        src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+            </section>
+            <section>
+                <section>
+                    <h2 class="special-header">Contents</h2>
+                    <ol class="special-body"><a></a>
+                        <li><a href="#/2">Bootstrap</a></li>
+                        <li><a href="#/3">Using Bootstrap</a></li>
+                        <li><a href="#/4">Reboot</a></li>
+                        <li><a href="#/5">Typography</a></li>
+                        <li><a href="#/6">Color</a></li>
+                        <li><a href="#/7">Buttons</a></li>
+                        <li><a href="#/8">Utility classes</a></li>
+                        <li><a href="#/9">Layout</a></li>
+                    </ol>
+                </section>
+                <section>
+                    <h2 class="special-header">Contents</h2>
+                    <ol start="9" class="special-body" style="top: 30%;">
+                        <li><a href="#/10">Icons</a></li>
+                        <li><a href="#11">Forms</a></li>
+                        <li><a href="#/12">Customizing Bootstrap</a></li>
+                    </ol>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Bootstrap</a></h2>
+                    <ul class="special-body">
+                        <li>Mobile-first, responsive frontend (CSS + JavaScript) toolkit, like Tailwind or Bulma.</li>
+                        <li>Free and open-source (one of the most popular projects on GitHub, +160.000 stars).</li>
+                        <li>Includes prebuilt componentes (buttons, navbars,...) and a grid layout system. </li>
+                        <li>Easy to customize (with CSS variables and Sass).</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Bootstrap</a></h2>
+                    <div class="special-body">
+                        <img style="margin-left:auto; margin-right:auto; width:55%; display:block;"
+                            src="bootstrap.svg" />
+                    </div>
+                </section>
+
+            </section>
+
+            <section>
+                <h2 class="special-header"><a href="#/1">Using Bootstrap</a></h2>
+                <div class="special-body">
+                    <ul>
+                        <li>Using CDN links (CSS and JavaScript) in HTML.</li>
+                    </ul>
+                    <pre
+                        data-cc-copy="HTML"><code class="html"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script></code></pre>
+                    <ul>
+                        <li>Download ready-to-use compiled code.</li>
+                        <li>Download source files (Sass and JavaScript).</li>
+                        <li>Add source code using a package manager (npm)</li>
+                    </ul>
+
+                    <p class="tip">Learn more about download options <a
+                            href="https://getbootstrap.com/docs/5.3/getting-started/download/">here</a>
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="special-header"><a href="#/1">Reboot</a></h2>
+                <div class="special-body">
+                    <ul>
+                        <li>Bootstrap overrides the browser's default styles for many HTML elements.</li>
+                        <li>Reboot provides an elegant, consistent, and simple baseline to build upon.</li>
+                        <li>It only uses element selectors (like p, h1-h6 or ul/ol)</li>
+                    </ul>
+
+                    <p class="tip">Learn more about reboot <a
+                            href="https://getbootstrap.com/docs/5.3/content/reboot/">here</a>
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Typography</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li><b><a href="https://getbootstrap.com/docs/5.3/content/typography/#display-headings">Display
+                                        headings</a></b>, that can be used when you need a heading to stand out.</li>
+                            <li><b><a href="https://getbootstrap.com/docs/5.3/content/typography/#lead">Lead
+                                        paragraphs</a></b>, that creates larger, emphasized text.</li>
+                            <li><b><a href="https://getbootstrap.com/docs/5.3/utilities/text/">Text
+                                        utilities:</a></b>
+                                <ul>
+                                    <li>Text alignment.</li>
+                                    <li>Text decoration.</li>
+                                    <li>Font weight.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Typography</a></h2>
+                    <div class="special-body">
+                        <pre data-cc-copy="HTML"><code class="html"><h1 class="display-3 text-center">Outdoor shoes</h1>
+<p class="lead">
+    Find a <span class="fw-bold">wide range</span> 
+    of shoes for trekking, hiking, and mountaineering.
+</p></code></pre>
+                        <img src="typography.png" alt="Typography sample"
+                            style="margin-left:auto; margin-right:auto; width:70%; display:block;" />
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Color</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>Bootstrap defines a set of theme colors:
+                                <ul class="sublist">
+                                    <div class="multiCol">
+                                        <div class="col">
+                                            <li>primary</li>
+                                            <li>secondary</li>
+                                            <li>success</li>
+                                            <li>info</li>
+                                        </div>
+                                        <div class="col">
+                                            <li>warning</li>
+                                            <li>danger</li>
+                                            <li>light</li>
+                                            <li>dark</li>
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li>We have color utilities, including text (<code>text-primary</code>) and background
+                                (<code>bg-primary</code>) classes.</li>
+                            <li>We can apply a linear gradient to the backgrounds with <code>bg-gradient</code> class.
+                            </li>
+
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Color</a></h2>
+                    <div class="special-body">
+                        <pre data-cc-copy="HTML"><code class="html"><h1 class="display-3 text-center text-light bg-secondary">
+    Outdoor shoes
+</h1>
+<p class="lead">
+    Find a <span class="fw-bold  text-info">wide range</span> 
+    of shoes for trekking, hiking, and mountaineering.
+</p></code></pre>
+                        <img src="color.png" alt="Color sample"
+                            style="margin-left:auto; margin-right:auto; width:70%; display:block;" />
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Buttons</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>Bootstrap button component is based in <code>btn</code> class.</li>
+                            <li>Also, we have button variants for each theme color (<code>btn-primary</code>).</li>
+                            <li>There are also variants without background (<code>btn-outline-primary</code>).</li>
+                            <li>Wen can get a larger or smaller button with <code>btn-lg</code> and <code>btn-sm</code>
+                                classes.</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Buttons</a></h2>
+                    <div class="special-body">
+                        <pre data-cc-copy="HTML"><code class="html"><button class="btn btn-primary btn-lg">Accept</button>
+<button class="btn btn-outline-danger btn-lg">Cancel</button></code></pre>
+                        <img src="buttons.png" alt="Buttons sample"
+                            style="margin-left:auto; margin-right:auto; width:70%; display:block;" />
+                        <div class="tip">You can also use these classes on <code>&lt;a&gt;</code> or
+                            <code>&lt;input&gt;</code> elements.
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Utility classes</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>Margin and padding:
+                                <ul>
+                                    <li>The classes are named using the format <code>{property}{sides}-{size}</code>.
+                                    </li>
+                                    <li><em>property</em> is <code>m</code> for margin or <code>p</code> for padding.
+                                    </li>
+                                    <li><em>sides</em> is one of: <code>t</code> (top), <code>b</code> (bottom),
+                                        <code>s</code> (start), <code>e</code> (end), <code>x</code> (start and end),
+                                        <code>y</code> (top and bottom) or blank (all 4 sides).
+                                    </li>
+                                    <li><em>size</em> is a number between 0 and 5.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Utility classes</a></h2>
+                    <div class="special-body">
+                        <pre data-cc-copy="HTML"><code class="html" data-trim><h1 class="display-3 text-center text-light bg-secondary m-4 py-3">
+    Outdoor shoes</h1>
+<p class="lead ms-4">
+    Find a <span class="fw-bold text-info">wide range</span>
+    of shoes for trekking, hiking, and mountaineering.</p>
+<button class="btn btn-primary btn-lg ms-4">Accept</button>
+<button class="btn btn-outline-danger btn-lg">Cancel</button>
+</code></pre>
+                        <img src="spacing.png" alt="Spacing sample"
+                            style="margin-left:auto; margin-right:auto; width:50%; display:block;" />
+                    </div>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Utility classes</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>Borders:
+                                <ul>
+                                    <li>Yo can choose from all borders (<code>border</code>) or one at a time
+                                        (<code>border-top</code>).
+                                    </li>
+                                    <li>Yo can also change color (<code>border-primary</code>) and with
+                                        (<code>border-1</code>).
+                                    </li>
+                                    <li>Classes to round its corners are named using the format
+                                        <code>rounded-{side}-{size}</code>.
+                                    </li>
+                                    <li><em>size</em> goes from 1 to 5, and also <code>pill</code> or
+                                        <code>circle</code>.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Utility classes</a></h2>
+                    <div class="special-body">
+                        <pre data-cc-copy="HTML"><code class="html" data-trim><h1 class="... m-4 py-3 border-dark border-4 rounded">
+Outdoor shoes</h1>
+<p class="lead ms-4">
+    Find a <span class="fw-bold text-info">wide range</span>
+    of shoes for trekking, hiking, and mountaineering.</p>
+<button class="... ms-4 rounded-start-pill">Accept</button>
+<button class="... rounded-end-pill">Cancel</button>
+</code></pre>
+                        <img src="borders.png" alt="Borders sample"
+                            style="margin-left:auto; margin-right:auto; width:50%; display:block;" />
+                    </div>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Utility classes</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>More utilities:
+                                <ul>
+                                    <li>Shadow.</li>
+                                    <li>Text.</li>
+                                    <li>Flexbox.</li>
+                                    <li>Links.</li>
+                                </ul>
+                            </li>
+                            <div class="tip">Learn more about utilities in <a
+                                    href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">Bootstrap
+                                    documentation</a></div>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Layout</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>Bootstrap's layout system is responsive and mobile-first.</li>
+                            <li>Bootstrap includes six default <strong>breakpoints</strong>:
+                                <ul class="sublist">
+                                    <li>Extra extra large (<code>xxl</code>): >= 1400px</li>
+                                    <li>Extra large (<code>xl</code>): >= 1200px</li>
+                                    <li>Large (<code>lg</code>): >= 992px</li>
+                                    <li>Medium (<code>md</code>): >= 768px</li>
+                                    <li>Small (<code>sm</code>): >= 576px</li>
+                                    <li>Extra small (no infix): < 576px</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Layout</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li><strong>Containers</strong> are the most basic layout element in Bootstrap.</li>
+                            <li>Bootstrap comes with three different containers:
+                                <ul class="sublist">
+                                    <li><code>.container</code>, which sets a <code>max-width</code> at each responsive
+                                        breakpoint.</li>
+                                    <li><code>.container-{breakpoint}</code>, which is <code>width: 100%</code> until
+                                        the specified breakpoint.</li>
+                                    <li><code>.container-fluid</code>, which is <code>width: 100%</code> at all
+                                        breakpoints.</li>
+                                </ul>
+                            </li>
+                            <li>Containers are required when using Bootstrap default grid system</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Layout</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>Bootstrap's <strong>grid system</strong> uses a series of containers, rows, and columns
+                                to layout and align content.</li>
+                            <li>It's built with flexbox and is fully responsive.</li>
+                            <li>There are 12 template columns per row, allowing you to create different combinations of
+                                elements that span any number of columns.</li>
+                            <li>You can control container and column sizing and behavior by each breakpoint.</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Layout</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>Basic equal-width grid:</li>
+                        </ul>
+                        <pre data-cc-copy="HTML"><code class="html"><div class="container">
+    <div class="row">
+        <div class="col">
+            Column 1
+        </div>
+        <div class="col">
+            Column 2
+        </div>
+    </div>
+</div>
+</code></pre>
+                        <p class="tip">Each <code>div</code> has six columns (12 / 2).
+                        </p>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Layout</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>Setting the width of the columns:</li>
+                        </ul>
+                        <pre data-cc-copy="HTML"><code class="html"><div class="container">
+    <div class="row">
+        <div class="col-8">
+            Column 1
+        </div>
+        <div class="col-4">
+            Column 2
+        </div>
+    </div>
+</div>
+</code></pre>
+                        <p class="tip">You may not set the width on all columns.
+                        </p>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Layout</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>Responsive columns using breakpoints:</li>
+                        </ul>
+                        <pre data-cc-copy="HTML"><code class="html"><div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            Column 1
+        </div>
+        <div class="col-6 col-md-4">
+            Column 2
+        </div>
+    </div>
+</div>
+</code></pre>
+                        <p class="tip">There are a lot of classes to configure your grid.
+                        </p>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Icons</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>Open source icon library with over 1.800 icons.</li>
+                            <li>Icons are SVGs.</li>
+                            <li>You can use them with or without Bootstrap.</li>
+                            <li>Install options:
+                                <ul class="sublist">
+                                    <li><code>npm</code> package.</li>
+                                    <li>Download it from GitHub.</li>
+                                    <li>Include it using CDN link.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <pre data-cc-copy="HTML"><code class="html">
+<link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</code></pre>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Icons</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>Usage options:
+                                <ul class="sublist">
+                                    <li>Embed icons within HTML with <code>&lt;svg&gt;</code> element.</li>
+                                    <li>Copy SVG files to your directory and reference them with &lt;img&gt; element.
+                                    </li>
+                                    <li>Use the SVG sprite to insert any icon through the &lt;use&gt; element.</li>
+                                    <li>Use the icon fonts, referencing class in HTML.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <pre data-cc-copy="HTML"><code class="html">
+<i class="bi-alarm" style="font-size: 2rem; color: blue;"></i>
+                        </code></pre>
+                    </div>
+                </section>
+
+            </section>
+
+            <section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Forms</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>Bootstrap includes classes for form controls:</li>
+                            <table>
+                                <tr>
+                                    <td>Label</td>
+                                    <td><code>.form-label</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Input and textarea</td>
+                                    <td><code>.form-control</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Select</td>
+                                    <td><code>.form-select</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Checkbox and radio</td>
+                                    <td><code>.form-check, .form-check-input, .form-check-label, form-switch</code></td>
+                                </tr>
+                                <tr>
+                                    <td>Range</td>
+                                    <td><code>.form-range</code></td>
+                                </tr>
+                            </table>
+                            <li>Some classes include size variants (e.g. <code>form-control-sm, form-control-lg</code>).
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Forms</a></h2>
+                    <div class="special-body">
+                        <pre data-cc-copy="HTML"><code class="html" data-trim><form>
+    <label for="email" class="form-label">Email address:</label>
+    <input type="text" id="email" class="form-control" />
+    <label for="subject" class="form-label">What is your question about?</label>
+    <select class="form-select" id="subject">
+        <option value="pricing" selected>Pricing query</option></select>
+    <input class="form-check-input" type="checkbox" id="conditions">
+    <label class="form-check-label" for="conditions">Accept conditions</label>
+</form>
+</code></pre>
+                        <img src="form.png" alt="Borders sample"
+                            style="margin-left:auto; margin-right:auto; width:40%; display:block;" />
+                    </div>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1">Forms</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li><strong>Input groups</strong> enhance some form controls by adding text, icons or
+                                buttons on either side.</li>
+                        </ul>
+                        <pre data-cc-copy="HTML"><code class="html" data-trim><label for="email" class="form-label">Email address:</label>
+<div class="input-group">
+    <span class="input-group-text">@</span>
+    <input type="text" id="email" class="form-control" />
+</div>
+                    
+</code></pre>
+                        <img src="inputgroups.png" alt="Borders sample"
+                            style="margin-left:auto; margin-right:auto; width:40%; display:block;" />
+
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2 class="special-header"><a href="#/1" style="font-size: 95%;">Customizing Bootstrap</a></h2>
+                    <ul class="special-body">
+                        <li>There are multiple ways to customize Bootstrap:
+                            <ul class="sublist">
+                                <li>Add or override Bootstrap’s styles.</li>
+                                <li>Using CSS variables.</li>
+                                <li><strong>Using Bootstrap's Sass source files.</strong></li>
+                            </ul>
+                        </li>
+                        <li>There are two ways to get Bootstrap's source files:
+                            <ul class="sublist">
+                                <li>Download the source files from <a
+                                        href="https://github.com/twbs/bootstrap">GitHub</a>.</li>
+                                <li><strong>Install Bootstrap's source files using npm.</strong></li>
+                            </ul>
+                        </li>
+                        <pre data-cc-copy="CLI">
+                            <code class="shell">
+npm install bootstrap
+                            </code>
+                        </pre>
+                    </ul>
+
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1" style="font-size: 95%;">Customizing Bootstrap</a></h2>
+                    <ul class="special-body">
+                        <li>Whenever possible, avoid modifying Bootstrap’s core files.</li>
+                        <li>Create your own stylesheet (<code>main.scss, custom.scss</code>) that imports Bootstrap.
+                        </li>
+                        <li>We have two options:
+                            <ul>
+                                <li>Include all of Bootstrap.</li>
+                                <li>Include only the parts you need.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1" style="font-size: 95%;">Customizing Bootstrap</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>Including all of Bootstrap:</li>
+                        </ul>
+                        <pre data-cc-copy="SCSS">
+                            <code class="scss">
+// Include any default variable overrides here 
+// Functions won't be available!
+$primary: #c29938;
+
+// Include all of Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Then add additional custom code here
+...
+                            </code>
+                        </pre>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="special-header"><a href="#/1" style="font-size: 95%;">Customizing Bootstrap</a></h2>
+                    <div class="special-body">
+                        <ul>
+                            <li>Including only the parts you need:</li>
+                        </ul>
+                        <pre data-cc-copy="SCSS">
+                            <code class="scss">
+// Include functions first
+@import "../node_modules/bootstrap/scss/functions";
+
+// Include any default variable overrides here 
+$primary: #c29938;
+
+// Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
+
+// Include any default map overrides here
+$custom-colors: (
+  "custom-color": #900
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+// Include remainder of required parts
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// Optionally include any other parts as needed
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+
+// Add additional custom code here
+                            </code>
+                        </pre>
+                    </div>
+                </section>
+            </section>
+
+        </div>
+    </div>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/copycode/copycode.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+        Reveal.initialize({
+            transition: "slide",
+            copycode: {
+                timeout: 1200
+            },
+            plugins: [
+                CopyCode,
+                RevealHighlight
+            ]
+        });
+    </script>
+</body>
+
+</html>
