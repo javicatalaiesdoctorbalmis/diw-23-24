@@ -106,13 +106,13 @@ div {
     display: block !important;
 }
 
-table {
+.reveal table {
     border: 1px solid;
     width: 100%;
     text-align: left;
     border-collapse: collapse;
   }
-  table td {
+  .reveal table td {
     border: 1px solid;
     padding: 3px 2px;
     font-size: 70%;
